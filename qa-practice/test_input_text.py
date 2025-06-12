@@ -10,9 +10,6 @@ import string
 
 invalid_number_26 = '12345678910111213141516171'
 INVALID_CHARACTERS = list((string.punctuation.replace("-", "").replace("_", "")))
-def is_valid_string(input_string):
-    pattern = r"^[a-zA-Z0-9_-]+$"
-    return bool(re.match(pattern, input_string))
 
 
 @pytest.fixture
