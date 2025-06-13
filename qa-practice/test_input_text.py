@@ -61,7 +61,7 @@ class TestInputPage:
             page.clear_text_line()
             page.text_line_set_text(invalid_number_of_character)
             page.press_enter_in_line()
-        with allure.step(f'Ожидаю сообщение об ошибке'):
+        with allure.step('Ожидаю сообщение об ошибке'):
             try:
                 page.wait.until(EC.presence_of_element_located(TISelectors.error_message()))
                 assert (page.get_error_message_text() == 'Please enter 2 or more characters' or
@@ -82,7 +82,7 @@ class TestInputPage:
             page.text_line_set_text(invalid_string)
             page.press_enter_in_line()
 
-        with allure.step(f'Ожидаю сообщение об ошибке'):
+        with allure.step('Ожидаю сообщение об ошибке'):
             try:
                 page.wait.until(EC.presence_of_element_located(TISelectors.error_message()))
                 assert page.get_error_message_text() == 'Enter a valid string consisting of letters, numbers, underscores or hyphens.'
