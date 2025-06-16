@@ -1,4 +1,4 @@
-from pages.text_input.base_page import BasePage
+from pages.base_page import BasePage
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
