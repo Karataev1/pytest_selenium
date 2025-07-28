@@ -44,7 +44,7 @@ class TestPasswordFiledPage:
                 page.take_a_screenshot_in_allure(name='fail_screen')
                 assert False, 'Текст не соответствует выводу (сообщение о выводе не появилось)'
 
-
+    @pytest.mark.negative
     @pytest.mark.parametrize('invalid_password', GenerateText.get_invalid_password())
     def test_send_invalid_password(self,page,invalid_password):
         """

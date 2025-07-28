@@ -34,7 +34,7 @@ class GenerateText:
         """
         Возвращает список невалидных email
         """
-        return [
+        emails_structure = [
                     'invalid-email',
                     'test@.com',
                     'test@example..com',
@@ -46,6 +46,8 @@ class GenerateText:
                     'test example@com',
                     '"test with space"@example.com'
         ]
+        lst = [GenerateText.generate_char(random.randint(1,16)) + email for email in emails_structure]
+        return lst
 
 
     @staticmethod

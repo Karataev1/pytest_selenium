@@ -45,6 +45,7 @@ class TestEmailFiledPage:
                 assert False, 'Текст не соответствует выводу (сообщение о выводе не появилось)'
 
 
+    @pytest.mark.negative
     @pytest.mark.parametrize('invalid_email', GenerateText.get_invalid_email())
     def test_send_invalid_email(self,page,invalid_email):
         """
