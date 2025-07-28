@@ -13,7 +13,8 @@ class TestEmailFiledPage:
     @allure.title('test is_displayed')
     def test_line_is_displayed(self, page):
         """
-        Тест проверяет отображение поля ввода email для пользователяя
+        Тест проверяет отображение поля ввода email для пользователя
+        изменения тут
         """
         with allure.step('Проверяю отображение поля для ввода email'):
             page.take_a_screenshot_in_allure(name='page_screen')
